@@ -186,8 +186,8 @@ public class TelaExportaScripts extends javax.swing.JFrame {
             Conexao conexao;
 
             conexao = new Conexao(txtServer.getText(),
-                    txtBanco.getText(), txtUsuario.getText(), txtSenha.getText(),
-                    txtPorta.getText(),
+                    txtBanco.getText(), txtUsuario.getText(), 
+                    String.valueOf(txtSenha.getPassword()), txtPorta.getText(),
                     criarBanco.isSelected(), comboSGBD.getSelectedIndex(), pp);
             if (!conexao.isERRO()) {
                 JOptionPane.showMessageDialog(null, "Exportado");
