@@ -23,7 +23,6 @@ public class Historico implements Cloneable {
     public ArrayList<mxCell> getNewCells() {
         ArrayList<mxCell> newCells = new ArrayList<>(atual);
         for (mxCell c : atual) {
-            System.out.println(c);
         }
         return newCells;
     }

@@ -144,6 +144,7 @@ public class TelaSalvarScripts extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "AVISO - Lembre-se de realizar o Modelo Relacional de Tabelas para completar o projeto de banco de dados",
                         "AVISO", JOptionPane.WARNING_MESSAGE);
                 JOptionPane.showMessageDialog(null, Scripts.mapeamento);
+                this.dispose();
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(null, "ERRO");
             }

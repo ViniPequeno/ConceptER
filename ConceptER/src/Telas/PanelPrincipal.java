@@ -1205,10 +1205,8 @@ public class PanelPrincipal extends javax.swing.JPanel implements ActionListener
             if (l != null && l.getLigacao().equals(objetoSelecionado)) {
                 if (chkBoxParticipacaoTotal.isSelected()) {
                     l.setTotal(true);
-                    System.out.println("111");
                 } else {
                     l.setTotal(false);
-                    System.out.println("222");
                 }
                 l.atualiza();
                 modificarTitle();
@@ -1236,7 +1234,6 @@ public class PanelPrincipal extends javax.swing.JPanel implements ActionListener
     private void comboxDominioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxDominioActionPerformed
         for (Atributo a : abas.get(tabSelecionada).getAtributos()) {
             if (a.getCell().equals(objetoSelecionado)) {
-                System.out.println((String) comboxDominio.getSelectedItem());
                 a.setDominio((String) comboxDominio.getSelectedItem());
                 for (int i = 0; i < Valores.getDOMINIOS().size(); i++) {
                     if (Valores.getDOMINIOS().get(i).equals(a.getDominio())) {
@@ -1409,21 +1406,20 @@ public class PanelPrincipal extends javax.swing.JPanel implements ActionListener
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        System.out.println("Entidades");
         for (Entidade e : getEntidades()) {
-            System.out.println(e.getNome());
+            //System.out.println(e.getNome());
         }
-        System.out.println("Atributos");
+        //System.out.println("Atributos");
         for (Atributo a : getAtributos()) {
-            System.out.println(a.getNome() + " " + a.getCellDono().getValue());
+            //System.out.println(a.getNome() + " " + a.getCellDono().getValue());
         }
-        System.out.println("Relacionamentos");
+        //System.out.println("Relacionamentos");
         for (Relacionamento r : getRelacionamentos()) {
-            System.out.println(r.getNome());
+            //System.out.println(r.getNome());
         }
-        System.out.println("Ligações");
+        //System.out.println("Ligações");
         for (Ligacao l : getLigacoes()) {
-            System.out.println(l.getSource().getValue() + " " + l.getTarget().getValue());
+            //System.out.println(l.getSource().getValue() + " " + l.getTarget().getValue());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -2556,7 +2552,6 @@ public class PanelPrincipal extends javax.swing.JPanel implements ActionListener
                                 cellLigacao1 = cell;
                             }
                         } else {
-                            System.out.println(cellLigacao1.getValue());
                             if (cellLigacao2 == null) {
                                 if (cell.getTipo().contains("relacionamento")) {
                                     boolean ok = true;

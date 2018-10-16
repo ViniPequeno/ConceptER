@@ -54,16 +54,12 @@ public class BindingListener implements DocumentListener {
             String text = e.getDocument().getText(
                     e.getDocument().getStartPosition().getOffset(),
                     e.getDocument().getEndPosition().getOffset() - 1);
-            System.out.println("Entered text: " + text);
-            System.out.println("Field to be updated: " + fieldName);
 
-            System.out.println("Old model values: " + model);
 
             Method method = model.getClass().getDeclaredMethod(
                     "set" + fieldName, String.class);
             method.invoke(model, text);
 
-            System.out.println("New model values: " + model);
         } catch (BadLocationException e1) {
             e1.printStackTrace();
         } catch (NoSuchMethodException ex) {

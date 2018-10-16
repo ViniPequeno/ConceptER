@@ -76,9 +76,7 @@ public class Aba extends mxGraphComponent {
                     Ligacao.autoRelacionamento(r.getLigacoes().get(0), r.getLigacoes().get(1), this.graph);
                     for (Ligacao l : r.getLigacoes()) {
                         for (mxPoint p : l.getLigacao().getGeometry().getPoints()) {
-                            System.out.println(p.getX() + " " + p.getY());
                         }
-                        System.out.println();
                     }
                 }
             }
