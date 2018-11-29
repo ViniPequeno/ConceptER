@@ -1,2 +1,2 @@
 # ConceptER
-Software para realização do MER e exportação para código SQL ou para um SGBD
+Software para criação do Modelo Entidade-Relacionamneto e sua exportação para código SQL ou para um SGBD.
